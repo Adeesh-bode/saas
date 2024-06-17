@@ -7,7 +7,6 @@ import { SignIn, SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 // import { dark } from '@clerk/themes';
 
 
-
 const IBM = IBM_Plex_Sans({ 
   subsets: ["latin"],
   weight: ['400','500','600','700'],

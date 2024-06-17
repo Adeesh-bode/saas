@@ -1,4 +1,4 @@
-export const navLinks = [
+export const NavLinks = [
     {
       label: "Home",
       route: "/",
@@ -58,7 +58,7 @@ export const navLinks = [
           isIncluded: true,
         },
         {
-          label: "Priority Customer Support",
+          label: "Priority Cu stomer Support",
           isIncluded: false,
         },
         {
