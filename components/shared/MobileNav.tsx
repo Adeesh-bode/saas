@@ -10,9 +10,10 @@ import {
 } from "@/components/ui/sheet"
 import Link from 'next/link'
 import Image from 'next/image'
-import { SignedIn, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { usePathname } from 'next/navigation'
 import { NavLinks } from '@/constants'
+import { Button } from "@/components/ui/button"
 
 
 const MobileNav = () => {
@@ -28,6 +29,11 @@ const MobileNav = () => {
           <UserButton afterSignOutUrl='/'  />
         </SignedIn>
         <Sheet>
+          <SignedOut>
+            <Button variant="outline" asChild className='button bg-purple-gradient bg-cover'>
+              <Link href='/sign-in'>Login</Link>
+            </Button>
+          </SignedOut>
           <SheetTrigger>
             <Image src='/assets/icons/menu.svg' alt='menu' width={30} height={30} />
           </SheetTrigger>
@@ -53,6 +59,11 @@ const MobileNav = () => {
                   <li className='flex-center cursor-pointer gap-2 p-4' >
                       <UserButton afterSignOutUrl='/' showName />
                   </li>
+                  <SignedOut>
+                    <Button variant="outline" asChild className='w-full flex-center  button bg-purple-gradient bg-cover'>
+                      <Link href='/sign-in'>Login</Link>
+                    </Button>
+                  </SignedOut>
                 </ul>
             </>  
           </SheetContent>
