@@ -2,6 +2,10 @@ import mongoose , { Mongoose } from 'mongoose'; // Mongoose for types
 
 const MONGODB_URL = process.env.MONGODB_URL ;
 
+if(!MONGODB_URL) {
+    throw new Error ("MONGODB_URL is missing");
+}
+
 interface MongooseConnection {
     conn: Mongoose |  null,
     promise: Promise<Mongoose> | null;
