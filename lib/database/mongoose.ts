@@ -26,7 +26,7 @@ export const connectToDatabase = async () => {
     if (!MONGODB_URL) throw new Error('MONGODB_URL is missing');
 
     cached.promise = cached.promise ||  mongoose.connect(MONGODB_URL, {
-        dbName: 'imagehelp',
+        dbName: 'users', // changed from imagehelp name of project 
         bufferCommands:false,
     });
 
