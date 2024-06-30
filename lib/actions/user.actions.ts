@@ -10,7 +10,7 @@ import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 
-// CRUD operations
+// CRUD operations - these are serve actn used in webhooks i.e in api.webhooks/clerk whenever a event is triggered this actns are called
 
 // CREATE
 export async function createUser(user: CreateUserParams) {

@@ -1,4 +1,7 @@
 /* eslint-disable camelcase */
+
+// whenever clerk have a signup or account changes the below code will trigger the webhooks to store data in backend ( use of user server actn takes place here)
+
 import { clerkClient } from "@clerk/nextjs/server";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
@@ -67,7 +70,7 @@ export async function POST(req: Request) {
       username: username!,
       firstName: first_name || '' ,
       lastName: last_name || '' ,
-      photo: image_url,
+      photo: image_url, 
     };
 
     const newUser = await createUser(user);
